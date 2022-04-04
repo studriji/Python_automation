@@ -29,7 +29,7 @@ soup = BeautifulSoup(page,"html.parser")
 image_tag = soup.select(f'img[alt="{name}\'s profile picture"]') #extra forward slash is to overcome the confusion between inverted comma
 # for private profile
 if not image_tag:
-    image_tag = soup.select('.be6sR')
+    image_tag = soup.select('.be6sR')#. for class
 
 print(image_tag)
 url = image_tag[0]["src"]
