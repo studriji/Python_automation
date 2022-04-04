@@ -39,11 +39,15 @@ driver.implicitly_wait(10)
 k=1
 while True:
     try:
-        birthday = driver.find_element_by_xpath(f'/html/body/div[1]/div/div[1]/div/div[3]/div/div/div[1]/div[1]/div[2]/div/div/div/div/div[{k}]/div/div/div/div[2]/div/div/div[2]/div[2]/div/form/div/div/div[1]/div/div/div[2]/div/div/div/div')
-        birthday.send_keys("happy birthday")
+        birthday = driver.find_element_by_xpath(f'/html/body/div[1]/div/div[1]/div/div[3]/div/div/div[1]/div[1]/div[2]/div/div/div/div/div[1]/div/div/div/div[2]/div/div/div[2]/div[2]/div/form/div/div/div[{k}]/div/div/div/div/div/div/div')
+        birthday.send_keys("happy birthday"+'\n')  #\n for hitting enter
+        
         k=k+1
     except Exception as e:
         print(e)
         print(k-1)
         break
     
+#//div[@class='sjgh65i0']/div/div/div/div[2]/div/div/div[2]/div[2]
+#/html/body/div[1]/div/div[1]/div/div[3]/div/div/div[1]/div[1]/div[2]/div/div/div/div/div[1]/div/div/div/div[2]/div/div/div[2]/div[2]/div/form/div/div/div[1]/div/div/div/div/div/div/div
+#/html/body/div[1]/div/div[1]/div/div[3]/div/div/div[1]/div[1]/div[2]/div/div/div/div/div[2]/div/div/div/div[2]/div[1]/div/div[2]/div[2]/div/form/div/div/div[1]/div/div/div[2]/div/div/div/div
